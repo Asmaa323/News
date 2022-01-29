@@ -1,0 +1,37 @@
+﻿@model List<News>
+<section id="about" class="about">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+
+        <h1 style="padding-bottom:50px;">@ViewBag.Cat</h1>
+
+
+        @foreach (var item in Model)
+        {
+            <div class="about-news" style="padding-bottom:30px;">
+                <div class="row">
+
+
+
+                    <div class="col-lg-6 order-1 order-lg-2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="about-img">
+                            <img src="~/@item.Image" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                        <h3>@item.Name</h3>
+                        <p>
+                            @item.Description
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+
+        }
+
+    </div>
+
+
+
+</section>

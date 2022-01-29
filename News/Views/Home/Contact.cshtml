@@ -1,0 +1,35 @@
+﻿@model ContactUs;
+<section id="book-a-table" class="book-a-table">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+
+        <div class="section-title">
+           
+            <p>Contact Us</p>
+        </div>
+
+        <form action="SaveContact" method="post" role="form" class="contactform aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 form-group">
+                    <input type="text" name="name" class="form-control" asp-for="Name" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                    <div class="validate"></div>
+                </div>
+                <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+                    <input type="email" class="form-control" name="email"  asp-for="Email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+                    <div class="validate"></div>
+                </div>
+                <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+                    <input type="text" class="form-control" name="phone"asp-for="Phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                    <div class="validate"></div>
+                </div>
+              
+            </div>
+            <div class="form-group mt-3">
+                <textarea class="form-control" name="message" asp-for="Message" rows="5" placeholder="Message"></textarea>
+                <div class="validate"></div>
+            </div>
+ 
+            <div class="text-center"><button type="submit">Submit</button></div>
+        </form>
+
+    </div>
+</section>

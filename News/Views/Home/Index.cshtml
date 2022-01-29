@@ -1,0 +1,32 @@
+﻿@model List<Category>
+<section id="why-us" class="why-us">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>News</h2>
+            <p>The Best News</p>
+        </div>
+
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                
+                    <div class="col-lg-4" style="padding-bottom:20px">
+                        <a href="/Home/News/@item.Id">
+                            <div class="box aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
+
+
+                                <h4>@item.Name</h4>
+                                <p>@item.Description</p>
+                            </div>
+                            </a>
+                    </div>
+                   
+            }
+                    
+
+
+        </div>
+
+    </div>
+</section>

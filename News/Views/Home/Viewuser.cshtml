@@ -1,0 +1,26 @@
+﻿@model List<ContactUs>
+<section>
+    <form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                { 
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Email</td>
+                    <td>@item.Phone</td>
+                    <td>@item.Message</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </form>
+</section>
